@@ -38,20 +38,48 @@ const HeroCarousel = () => {
             vote_average: 7.4,
             vote_count: 346,
         },
+        {
+            adult: false,
+            backdrop_path: "/nmGWzTLMXy9x7mKd8NKPLmHtWGa.jpg",
+            genre_ids: [
+                16,
+                12,
+                35,
+                14
+            ],
+            id: 438148,
+            original_language: "en",
+            original_title: "Minions: The Rise of Gru",
+            overview: "A fanboy of a supervillain supergroup known as the Vicious 6, Gru hatches a plan to become evil enough to join them, with the backup of his followers, the Minions.",
+            popularity: 1779.334,
+            poster_path: "/wKiOkZTN9lUUUNZLmtnwubZYONg.jpg",
+            release_date: "2022-06-29",
+            title: "Minions: The Rise of Gru",
+            video: false,
+            vote_average: 7.7,
+            vote_count: 1900
+        },
     ]);
 
     const settingsLG = {
         arrows: true,
         slidesToShow: 1,
         infinite: true,
+        dots: true,
         speed: 500,
         slideToScroll: 1,
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
+        autoplay: true,// for understanding of speed of carausal react-slick -documentation
+        speed: 2000,
+        autoplaySpeed: 4000,
+        cssEase: "linear"
+
     };
 
     const settings = {
         arrows: true,
+
         slidesToShow: 1,
         infinite: true,
         speed: 500,
@@ -62,6 +90,7 @@ const HeroCarousel = () => {
 
     return (
         <>
+            {/* for large scrren it should be hidden and for small and medium screen it should be display */}
             <div className="lg:hidden">
                 <HeroSlider {...settings}>
                     {images.map((images) => (
@@ -75,6 +104,7 @@ const HeroCarousel = () => {
                     ))}
                 </HeroSlider>
             </div>
+            {/* for large screen it should be block and for small or medium screen it should be hidden  */}
             <div className="hidden lg:block">
                 <HeroSlider {...settingsLG}>
                     {images.map((images) => (

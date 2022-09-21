@@ -1,13 +1,18 @@
-import './App.css';
+import './App.css'
+import axios from 'axios'
 //Routing
 import { Routes, Route } from "react-router-dom"
 //React slick css
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 //pages
-import HomePage from './pages/Home.page';
-import MoviePage from './pages/Movie.page';
-import PlayPage from './pages/Play.page';
+import HomePage from './pages/Home.page'
+import MoviePage from './pages/Movie.page'
+import PlayPage from './pages/Play.page'
+
+axios.defaults.baseURL = "https://api.themoviedb.org/3"
+axios.defaults.params = {}
+axios.defaults.params["api_key"] = "643114c5cc8554f8c9ccfda04f0294b5"
 
 function App() {
   return (
