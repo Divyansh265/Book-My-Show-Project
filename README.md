@@ -1,3 +1,5 @@
+BookMyShow Clone Documentation
+https://docs.google.com/document/d/1x7ZUZ_TwtM-5N7MQrMzBwdFFmWwPaHvvYQ5PR0sYSPg/edit
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
